@@ -1,0 +1,51 @@
+@import url(reset.css);
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+:root {
+  /* COLORS / COLORES */
+    --colores-degradados-color-gris: #7e7d7f;
+    --colores-degradados-color-violeta: #5f2051;
+    --colores-degradados-color-violeta2: #240e47;
+    --colores-planos-color-pink: #d6a0b4;
+    --colores-planos-color-purple: #5d2569;
+    --colores-planos-color-red: #b14e6f;
+    --colores-planos-color-sea-splash: #8be9bb;
+    --colores-planos-color-white: #f7eff7;
+
+  /* TYPOGRAPHY / TIPOGRAFIA */
+  
+  /* SIZES / TAMANOS */
+ 
+  /* SHADOW / SOMBRA */
+ 
+}
+/* ************************ */
+/* FORM */
+/* ************************ */
+form{
+  background-color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  
+}
+
+/* ************************ */
+/* HEADER */
+/* ************************ */
+
+
+
+/* ************************ */
+/* MAIN */
+/* ************************ */
+
+
+
+/* ************************ */
+/* FOOTER */
+/* ************************ */
