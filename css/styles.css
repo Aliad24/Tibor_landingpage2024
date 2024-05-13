@@ -8,43 +8,126 @@
 
 :root {
   /* COLORS / COLORES */
-    --colores-degradados-color-gris: #7e7d7f;
-    --colores-degradados-color-violeta: #5f2051;
-    --colores-degradados-color-violeta2: #240e47;
-    --colores-planos-color-pink: #d6a0b4;
-    --colores-planos-color-purple: #5d2569;
-    --colores-planos-color-red: #b14e6f;
-    --colores-planos-color-sea-splash: #8be9bb;
-    --colores-planos-color-white: #f7eff7;
+  --colores-degradados-color-gris: #7e7d7f;
+  --colores-degradados-color-violeta: #5f2051;
+  --colores-degradados-color-violeta2: #240e47;
+  --colores-planos-color-pink: #d6a0b4;
+  --colores-planos-color-purple: #5d2569;
+  --colores-planos-color-red: #b14e6f;
+  --colores-planos-color-sea-splash: #8be9bb;
+  --colores-planos-color-white: #f7eff7;
+  --colores-planos-color-black: #141414;
 
   /* TYPOGRAPHY / TIPOGRAFIA */
-  
+
   /* SIZES / TAMANOS */
- 
+
   /* SHADOW / SOMBRA */
- 
 }
+.btn {
+  padding: 1.25rem 2.5rem;
+  border-radius: 0.5rem;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    106deg,
+    #7e7d7f 5.76%,
+    #5f2051 49.43%,
+    #240e47 94.89%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1726px;
+  height: 971px;
+  border-radius: 30px;
+  background: linear-gradient(
+    102deg,
+    #f7eff7 35.55%,
+    #d6a0b4 67.08%,
+    #918c91 98.61%
+  );
+
+  padding: 30px 200px 100px 200px;
+  display: grid;
+  column-gap: 100px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  & .izquierda {
+    display: grid;
+    grid-template-columns: [boton1]auto [boton2]auto [sobrante]1fr;
+    grid-template-rows: [nav]1fr [titular]auto [parrafo]auto [botones]65px;
+    column-gap: 30px;
+
+    & .izquierda__btndemo {
+      grid-column: boton1;
+      /* botones / botones */
+      grid-row: botones;
+      justify-self: center;
+      align-self: center;
+
+      background: var(--colores-planos-color-black);
+      color: var(--colores-planos-color-white);
+    }
+    & .izquierda__btncall {
+      grid-column: boton2;
+      grid-row: botones;
+
+      justify-self: center;
+      align-self: center;
+
+      background: var(--colores-planos-color-sea-splash, #8be9bb);
+      color: var(--colores-planos-color-black);
+    }
+  }
+  & .derecha {
+    display:grid;
+    grid-template-columns: [todo]1fr;
+    grid-template-rows: [botones]auto [formulario]1fr;
+    row-gap: 50px;
+
+    & .derecha__botones {
+      display: flex;
+      justify-content:end;
+      gap: 20px;
+      align-items: center;
+
+      & .derecha__btndemo {
+        background: var(--colores-planos-color-black);
+        color: var(--colores-planos-color-white);
+      }
+      
+      & .derecha__btncall {
+        background: var(--colores-planos-color-sea-splash, #8be9bb);
+        color: var(--colores-planos-color-black);
+      }
+    }
+    & .derecha__formulario{
+      grid-column: todo;
+      grid-row: formulario;
+      border-radius: 30px;
+      background: var(--colores-planos-color-white, #F7EFF7);
+    }
+  }
+}
+
 /* ************************ */
 /* FORM */
 /* ************************ */
-form{
-  background-color: #fff;
-  width: 50%;
-  margin: 0 auto;
-  
-}
 
 /* ************************ */
 /* HEADER */
 /* ************************ */
 
-
-
 /* ************************ */
 /* MAIN */
 /* ************************ */
-
-
 
 /* ************************ */
 /* FOOTER */
