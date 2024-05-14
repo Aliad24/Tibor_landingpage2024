@@ -1,5 +1,6 @@
 @import url(reset.css);
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 /* * {
   margin: 0;
   padding: 0;
@@ -22,8 +23,25 @@
 
   /* SIZES / TAMANOS */
 
+  --size-size-1: 0.25rem;
+  --size-size-2: 0.5rem;
+  --size-size-3: 0.75rem;
+  --size-size-4: 1rem;
+  --size-size-5: 1.25rem;
+  --size-size-6: 1.5rem;
+  --size-size-7: 1.75rem;
+  --size-size-8: 2rem;
+  --size-size-9: 2.25rem;
+  --size-size-10: 2.5rem;
+  --size-size-11: 2.75rem;
+  --size-size-12: 3rem;
+  --size-size-13: 3.25rem;
+  --size-size-14: 3.5rem;
+  --size-size-15: 3.75rem;
+  --size-size-16: 4rem;
   /* SHADOW / SOMBRA */
 }
+
 .btn {
   padding: 1.25rem 2.5rem;
   border-radius: 0.5rem;
@@ -40,6 +58,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Source Sans 3", sans-serif;
+}
+a {
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--colores-planos-color-black);
 }
 
 .container {
@@ -55,16 +78,50 @@ body {
 
   padding: 30px 200px 100px 200px;
   display: grid;
-  column-gap: 100px;
+  column-gap: 130px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 
   & .izquierda {
     display: grid;
     grid-template-columns: [boton1]auto [boton2]auto [sobrante]1fr;
-    grid-template-rows: [nav]1fr [titular]auto [parrafo]auto [botones]65px;
-    column-gap: 30px;
+    grid-template-rows: [nav]1fr [titular]auto [parrafo]auto [botones]auto [zonavacia]3.125rem;
+    column-gap: 1.875rem;
+    row-gap: 3.125rem;
+    align-items: flex-start;
 
+    /* MENU */
+    & .izquierda__menu {
+      grid-column: boton1 / sobrante;
+      grid-row: 1 / 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    & .izquierda__titulo {
+      grid-column: 1 / -1;
+      grid-row: titular / parrafo;
+      /* color: #000; */
+
+      font-family: "Space Grotesk", sans-serif;
+      font-size: var(--size-size-15, 60px);
+      /* font-style: normal; */
+      font-weight: 500;
+      line-height: normal;
+
+      & .izquierda__rojo {
+        color: var(--colores-planos-color-red, #b14e6f);
+      }
+    }
+    & .izquierda__parrafo {
+      grid-column: 1/-1;
+      grid-row: parrafo/botones;
+    }
+    & .izquierda__logo {
+    }
+
+    /* BOTONES */
     & .izquierda__btndemo {
       grid-column: boton1;
       /* botones / botones */
@@ -75,6 +132,7 @@ body {
       background: var(--colores-planos-color-black);
       color: var(--colores-planos-color-white);
     }
+
     & .izquierda__btncall {
       grid-column: boton2;
       grid-row: botones;
@@ -86,15 +144,16 @@ body {
       color: var(--colores-planos-color-black);
     }
   }
+
   & .derecha {
-    display:grid;
+    display: grid;
     grid-template-columns: [todo]1fr;
     grid-template-rows: [botones]auto [formulario]1fr;
     row-gap: 50px;
 
     & .derecha__botones {
       display: flex;
-      justify-content:end;
+      justify-content: end;
       gap: 20px;
       align-items: center;
 
@@ -102,17 +161,35 @@ body {
         background: var(--colores-planos-color-black);
         color: var(--colores-planos-color-white);
       }
-      
+
       & .derecha__btncall {
         background: var(--colores-planos-color-sea-splash, #8be9bb);
         color: var(--colores-planos-color-black);
       }
+      & .btn__telefono {
+        background: url(/svg/Vector_telefono.svg);
+        width: 20px;
+        height: 20px;
+      }
     }
-    & .derecha__formulario{
+    & .derecha__formulario {
       grid-column: todo;
       grid-row: formulario;
       border-radius: 30px;
-      background: var(--colores-planos-color-white, #F7EFF7);
+      background: var(--colores-planos-color-white, #f7eff7);
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(7, auto);
+      gap: 10px;
+
+      & .form__title {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        font-size: 20px;
+      }
     }
   }
 }

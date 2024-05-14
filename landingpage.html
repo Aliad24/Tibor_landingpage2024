@@ -15,16 +15,21 @@
     <div class="container">
       <!-- IZQUIERDA -->
       <section class="izquierda">
-        <nav>
-          <ul>
-            <li>Kyros</li>
-            <li>About</li>
-            <li>Features</li>
-            <li>Blog</li>
-          </ul>
+        <nav class="izquierda__menu">
+          <img src="/svg/logo.svg" alt="" class="izquierda__logo" />
+          <a href="izquierda__about">About</a>
+          <a href="izquierda__features">Features</a>
+          <a href="izquierda__blog">Blog</a>
         </nav>
-        <h1></h1>
-
+        <h3 class="izquierda__titulo">
+          Kyros takes the headache out of
+          <span class="izquierda__rojo"><br />AML compliance</span>.
+        </h3>
+        <p class="izquierda__parrafo">
+          Kyros is a complete KYC and AML cloud-based solution, with native API
+          supoort. Multiple sources, one simple dashboard. Onboard and monitor
+          users with ease. It sound too goood to be true-discover why it’s not.
+        </p>
         <a href="" class="izquierda__btndemo btn">Try demo</a>
         <a href="" class="izquierda__btncall btn">Call to sales</a>
       </section>
@@ -33,9 +38,141 @@
         <section class="derecha__botones">
           <a href="" class="derecha__login">login</a>
           <a href="" class="derecha__btndemo btn">Try demo</a>
-          <a href="" class="derecha__btncall btn">Call to sales</a>
+          <a href="" class="derecha__btncall btn"
+            >Call to sales<i
+              class="btn__telefono"
+              src="/svg/Vector_telefono.svg"
+            ></i
+          ></a>
         </section>
-        <form action="" class="derecha__formulario"></form>
+
+        <form action="" method="post" class="derecha__formulario">
+          <h5 class="form__title">Book a 20 minutes discovery call now</h5>
+          <!-- <label for="input-name">Nombre *</label> -->
+          <input
+            class="input__name"
+            title="Aqui hay que escribir su nombre. Maximo 20 letras."
+            required
+            type="text"
+            name="nombre"
+            id="input-name"
+            placeholder="First name"
+            value=""
+            autofocus
+            autocomplete
+            pattern="[A-Za-z]{2,20}"
+          />
+          <!-- <label for="input-surname">Apellidos</label> -->
+          <input
+            type="text"
+            name="apellidos"
+            id="input-surname"
+            placeholder="Last name"
+            maxlength="40"
+          />
+          <!-- <label for="input-email">Email *</label> -->
+          <!-- <i><svg width="77" height="59" viewBox="0 0 77 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.0333 0C8.84184 0 5.78113 1.22685 3.52446 3.41066C1.26779 5.59448 0 8.55636 0 11.6447V47.3553C0 50.4436 1.26779 53.4055 3.52446 55.5893C5.78113 57.7732 8.84184 59 12.0333 59H64.9667C68.1582 59 71.2189 57.7732 73.4755 55.5893C75.7322 53.4055 77 50.4436 77 47.3553V11.6447C77 8.55636 75.7322 5.59448 73.4755 3.41066C71.2189 1.22685 68.1582 0 64.9667 0H12.0333ZM4.8133 11.6447C4.8133 9.79171 5.57397 8.01458 6.92798 6.70429C8.28198 5.39401 10.1184 4.6579 12.0333 4.6579H64.9667C66.8816 4.6579 68.718 5.39401 70.072 6.70429C71.426 8.01458 72.1867 9.79171 72.1867 11.6447V14.0637L38.4936 30.7638L4.8133 14.0699V11.6447ZM4.8133 19.3054L37.3961 35.4528C37.7358 35.6212 38.1119 35.709 38.4936 35.709C38.8752 35.709 39.2514 35.6212 39.591 35.4528L72.1867 19.2992V47.3584C72.1867 49.2114 71.426 50.9885 70.072 52.2988C68.718 53.6091 66.8816 54.3452 64.9667 54.3452H12.0365C10.1216 54.3452 8.28519 53.6091 6.93119 52.2988C5.57718 50.9885 4.81651 49.2114 4.81651 47.3584L4.8133 19.3054Z" fill="black"/>
+            </svg></i> -->
+          <input
+            required
+            type="email"
+            name="email"
+            id="input-email"
+            placeholder="Email"
+            maxlength="50"
+            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ "
+          />
+          <!-- <label for="input-phone">Telefono</label> -->
+          <input
+            type="tel"
+            name="phone"
+            id="input-phone"
+            placeholder="Phone"
+            pattern="^[A-Za-z]{2,30}$"
+          />
+          <!-- <label for="input-company">Empresa</label> -->
+          <input
+            type="text"
+            name="empresa"
+            id="input-company"
+            placeholder="Company"
+            pattern="^[A-Za-z]{2,30}$"
+          />
+          <!-- <label for="input-job">Cargo</label> -->
+          <input
+            type="text"
+            name="cargo"
+            id="input-job"
+            placeholder="Job title"
+            maxlength="15"
+            pattern="^[A-Za-z]{2,15}$"
+          />
+          <!-- <label for="input-country">Pais</label> -->
+          <select name="country" id="input-country">
+            <option value="AL">Albania</option>
+            <option value="DE">Alemania</option>
+            <option value="AD">Andorra</option>
+            <option value="AM">Armenia</option>
+            <option value="AT">Austria</option>
+            <option value="AZ">Azerbaiyán</option>
+            <option value="BE">Bélgica</option>
+            <option value="BY">Bielorrusia</option>
+            <option value="BA">Bosnia y Herzegovina</option>
+            <option value="BG">Bulgaria</option>
+            <option value="CY">Chipre</option>
+            <option value="VA">Ciudad del Vaticano</option>
+            <option value="HR">Croacia</option>
+            <option value="DK">Dinamarca</option>
+            <option value="SK">Eslovaquia</option>
+            <option value="SI">Eslovenia</option>
+            <option value="ES">España</option>
+            <option value="EE">Estonia</option>
+            <option value="FI">Finlandia</option>
+            <option value="FR">Francia</option>
+            <option value="GE">Georgia</option>
+            <option value="GR">Grecia</option>
+            <option value="HU">Hungría</option>
+            <option value="IE">Irlanda</option>
+            <option value="IS">Islandia</option>
+            <option value="IT">Italia</option>
+            <option value="KZ">Kazajistán</option>
+            <option value="XK">Kosovo</option>
+            <option value="LV">Letonia</option>
+            <option value="LI">Liechtenstein</option>
+            <option value="LT">Lituania</option>
+            <option value="LU">Luxemburgo</option>
+            <option value="MT">Malta</option>
+            <option value="MD">Moldavia</option>
+            <option value="MC">Mónaco</option>
+            <option value="ME">Montenegro</option>
+            <option value="NO">Noruega</option>
+            <option value="NL">Países Bajos</option>
+            <option value="PL">Polonia</option>
+            <option value="PT">Portugal</option>
+            <option value="UK">Reino Unido</option>
+            <option value="CZ">República Checa</option>
+            <option value="MK">República de Macedonia del Norte</option>
+            <option value="RO">Rumania</option>
+            <option value="RU">Rusia</option>
+            <option value="SM">San Marino</option>
+            <option value="RS">Serbia</option>
+            <option value="SE">Suecia</option>
+            <option value="CH">Suiza</option>
+            <option value="TR">Turquía</option>
+            <option value="UA">Ucrania</option>
+          </select>
+          <!-- <label for="input-country">Mensaje</label> -->
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Su mensaje"
+          ></textarea>
+          <button type="submit" disabled>Enviar</button>
+        </form>
       </section>
     </div>
 
