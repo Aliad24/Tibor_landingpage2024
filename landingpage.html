@@ -64,6 +64,7 @@
           />
           <!-- <label for="input-surname">Apellidos</label> -->
           <input
+            class="input__surname"
             type="text"
             name="apellidos"
             id="input-surname"
@@ -71,46 +72,56 @@
             maxlength="40"
           />
           <!-- <label for="input-email">Email *</label> -->
-          <!-- <i><svg width="77" height="59" viewBox="0 0 77 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.0333 0C8.84184 0 5.78113 1.22685 3.52446 3.41066C1.26779 5.59448 0 8.55636 0 11.6447V47.3553C0 50.4436 1.26779 53.4055 3.52446 55.5893C5.78113 57.7732 8.84184 59 12.0333 59H64.9667C68.1582 59 71.2189 57.7732 73.4755 55.5893C75.7322 53.4055 77 50.4436 77 47.3553V11.6447C77 8.55636 75.7322 5.59448 73.4755 3.41066C71.2189 1.22685 68.1582 0 64.9667 0H12.0333ZM4.8133 11.6447C4.8133 9.79171 5.57397 8.01458 6.92798 6.70429C8.28198 5.39401 10.1184 4.6579 12.0333 4.6579H64.9667C66.8816 4.6579 68.718 5.39401 70.072 6.70429C71.426 8.01458 72.1867 9.79171 72.1867 11.6447V14.0637L38.4936 30.7638L4.8133 14.0699V11.6447ZM4.8133 19.3054L37.3961 35.4528C37.7358 35.6212 38.1119 35.709 38.4936 35.709C38.8752 35.709 39.2514 35.6212 39.591 35.4528L72.1867 19.2992V47.3584C72.1867 49.2114 71.426 50.9885 70.072 52.2988C68.718 53.6091 66.8816 54.3452 64.9667 54.3452H12.0365C10.1216 54.3452 8.28519 53.6091 6.93119 52.2988C5.57718 50.9885 4.81651 49.2114 4.81651 47.3584L4.8133 19.3054Z" fill="black"/>
-            </svg></i> -->
-          <input
-            required
-            type="email"
-            name="email"
-            id="input-email"
-            placeholder="Email"
-            maxlength="50"
-            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ "
-          />
-          <!-- <label for="input-phone">Telefono</label> -->
-          <input
-            type="tel"
-            name="phone"
-            id="input-phone"
-            placeholder="Phone"
-            pattern="^[A-Za-z]{2,30}$"
-          />
-          <!-- <label for="input-company">Empresa</label> -->
-          <input
-            type="text"
-            name="empresa"
-            id="input-company"
-            placeholder="Company"
-            pattern="^[A-Za-z]{2,30}$"
-          />
-          <!-- <label for="input-job">Cargo</label> -->
-          <input
-            type="text"
-            name="cargo"
-            id="input-job"
-            placeholder="Job title"
-            maxlength="15"
-            pattern="^[A-Za-z]{2,15}$"
-          />
+          <div class="wrapper">
+            <i class="icon-email icon"></i>
+            <input
+              required
+              type="email"
+              name="email"
+              id="input-email"
+              placeholder="Email"
+              maxlength="50"
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ "
+            />
+          </div>
+          <div class="wrapper">
+            <!-- <label for="input-phone">Telefono</label> -->
+            <i class="icon-phone icon"></i>
+            <input
+              type="tel"
+              name="phone"
+              id="input-phone"
+              placeholder="Phone"
+              pattern="^[A-Za-z]{2,30}$"
+            />
+          </div>
+          <div class="wrapper">
+            <!-- <label for="input-company">Empresa</label> -->
+            <i class="icon-company icon"></i>
+            <input
+              type="text"
+              name="empresa"
+              id="input-company"
+              placeholder="Company"
+              pattern="^[A-Za-z]{2,30}$"
+            />
+          </div>
+          <div class="wrapper">
+            <!-- <label for="input-job">Cargo</label> -->
+            <i class="icon-job icon"></i>
+            <input
+              type="text"
+              name="cargo"
+              id="input-job"
+              placeholder="Job title"
+              maxlength="15"
+              pattern="^[A-Za-z]{2,15}$"
+            />
+          </div>
           <!-- <label for="input-country">Pais</label> -->
           <select name="country" id="input-country">
+            <option value="default" selected>Country</option>
             <option value="AL">Albania</option>
             <option value="DE">Alemania</option>
             <option value="AD">Andorra</option>
@@ -167,11 +178,9 @@
           <textarea
             name="message"
             id=""
-            cols="30"
-            rows="5"
-            placeholder="Su mensaje"
+            placeholder="Your message"
           ></textarea>
-          <button type="submit" disabled>Enviar</button>
+          <button type="submit" disabled>Book a call</button>
         </form>
       </section>
     </div>
