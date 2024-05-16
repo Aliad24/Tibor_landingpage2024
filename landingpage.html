@@ -46,8 +46,8 @@
           ></a>
         </section>
 
-        <form action="" method="post" class="derecha__formulario">
-          <h5 class="form__title">Book a 20 minutes discovery call now</h5>
+        <form action="form.php" method="post" class="derecha__formulario">
+          <h5 class="form__title">Book a 20 minutes <span class="title__rojo">discovery call</span> now</h5>
           <!-- <label for="input-name">Nombre *</label> -->
           <input
             class="input__name"
@@ -120,8 +120,8 @@
             />
           </div>
           <!-- <label for="input-country">Pais</label> -->
-          <select name="country" id="input-country">
-            <option value="default" selected>Country</option>
+          <select name="country" id="input-country" >
+            <option selected disabled class="placeholder">Selectiona un pais</option>
             <option value="AL">Albania</option>
             <option value="DE">Alemania</option>
             <option value="AD">Andorra</option>
